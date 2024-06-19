@@ -11,16 +11,23 @@ const songs = [
     {
         title: 'Havana',
         artist: 'Camila Cabello ft. Young Thug',
-        src: 'havana.mp3',
-        cover: 'havana.jpg'
+        src: '/assets/audio/havana-song.mp3',
+        cover: '/assets/images/havana.jpg'
     },
-    // Add more songs here
-    // {
-    //     title: 'Song Title',
-    //     artist: 'Artist Name',
-    //     src: 'song.mp3',
-    //     cover: 'cover.jpg'
-    // }
+
+    {
+        title: 'Shape of You',
+        artist: 'Ed Sheeran',
+        src: '/assets/audio/shape.mp3',
+        cover: '/assets/images/shape.jpg'
+    },
+
+    {
+        title: 'Labon ko',
+        artist: 'kk',
+        src: '/assets/audio/Labon.mp3',
+        cover: '/assets/images/labon.jpg'
+    }
 ];
 
 let currentSongIndex = 0;
@@ -34,12 +41,12 @@ function loadSong(song) {
 
 function playSong() {
     audio.play();
-    playBtn.textContent = '⏸️';
+    playBtn.innerHTML = '<i class="ri-pause-fill"></i>';
 }
 
 function pauseSong() {
     audio.pause();
-    playBtn.textContent = '▶️';
+    playBtn.innerHTML = '<i class="ri-play-fill"></i>';
 }
 
 function prevSong() {
