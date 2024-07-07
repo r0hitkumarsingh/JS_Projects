@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Password Generator</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <h1 class="title">Rohit Kumar</h1>
+      <h3 class="subtitle">Random Password Generator</h3>
+      <div id="inputContainer" class="input-container">
+        <label class="label">Password Length</label>
+        <input type="number" min="8" max="32" value="12" class="input" />
+      </div>
+
+      <div id="checkboxContainer" class="checkbox-Container">
+        <label>
+          <input type="checkbox" id="useSymbols checked" />
+          Symbols
+        </label>
+        <label>
+          <input type="checkbox" id="useNumbers checked" />
+          Number
+        </label>
+        <label>
+          <input type="checkbox" id="useLowerCase Checked" />
+          LowerCase
+        </label>
+        <label>
+          <input type="checkbox" id="useUpperCase Checked" />
+          UpperCase
+        </label>
+
+        <button class="generate-button">Genarate Password</button>
+
+        <div
+          id="generatedPasswordContainer"
+          class="generated-password-container"
+        >
+          <div class="input-container">
+            <label class="label">Generated Password:</label>
+            <input type="text" id="generatedPassword" readonly class="input" />
+            <button class="copy-button" id="copyToClipboard">Copy</button>
+          </div>
+        </div>
+        <p id="successMessage" class="success-message"></p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script src="script.js"></script>
+  </body>
+</html>
